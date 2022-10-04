@@ -44,12 +44,14 @@ class _HomeState extends State<Home> {
                               'Good Evening,',
                               style: TextStyle(
                                 fontSize: 22,
+                                color: Color(0xff610b0d),
                               ),
                             ),
                             Text(
                               'John Darkwa',
                               style: TextStyle(
                                 fontSize: 30,
+                                color: Color(0xff610b0d),
                               ),
                             ),
                           ],
@@ -86,82 +88,30 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          width: 100,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: const Color(0xfff3e9e9),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Icon(Icons.check),
-                                Text(
-                                  'Check Results',
-                                  style: TextStyle(fontSize: 19),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 100,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: const Color(0xfff3e9e9),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Icon(
-                                    Icons.wallet,
-                                  ),
-                                ),
-                                Text(
-                                  'Pay   Fees',
-                                  style: TextStyle(fontSize: 19),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 100,
-                          height: 100,
-                          decoration: BoxDecoration(
-                            color: const Color(0xfff3e9e9),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Icon(Icons.check),
-                                Text(
-                                  'Register Courses',
-                                  style: TextStyle(fontSize: 19),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
+                  const ActivitySession(),
+                  const Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: Text(
+                      'What is trending?',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
                     ),
                   ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 8, horizontal: 18),
+                    child: Container(
+                      height: 200,
+                      decoration: BoxDecoration(
+                        color: const Color(0xfff3e9e9),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Center(
+                        child: Image.asset('images/img.png'),
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
@@ -169,6 +119,114 @@ class _HomeState extends State<Home> {
         ),
       ]),
       backgroundColor: const Color(0xff6b0b02),
+    );
+  }
+}
+
+class ActivitySession extends StatelessWidget {
+  const ActivitySession({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(
+              color: const Color(0xfff3e9e9),
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Icon(
+                      Icons.insert_chart,
+                      color: Color(0xff610b0d),
+                    ),
+                    Text(
+                      'Check Results',
+                      style: TextStyle(
+                        fontSize: 19,
+                        color: Color(0xff610b0d),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(
+              color: const Color(0xfff3e9e9),
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.wallet,
+                      color: Color(0xff610b0d),
+                    ),
+                  ),
+                  Text(
+                    'Pay   Fees',
+                    style: TextStyle(
+                      fontSize: 19,
+                      color: Color(0xff610b0d),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(
+              color: const Color(0xfff3e9e9),
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Icon(
+                      Icons.receipt_long,
+                      color: Color(0xff610b0d),
+                    ),
+                    Text(
+                      'Register Courses',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xff610b0d),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
