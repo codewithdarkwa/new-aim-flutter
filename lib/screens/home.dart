@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(70),
-        child: CustomAppBar(appBarTitle: "Home"),
+        child: CustomAppBar(appBarTitle: "Home", icon: Icons.menu),
       ),
       body: ListView(
         children: [

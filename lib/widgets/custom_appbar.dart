@@ -5,9 +5,10 @@ class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
     Key? key,
     this.appBarTitle,
+    required this.icon,
   }) : super(key: key);
   final appBarTitle;
-
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -25,7 +26,7 @@ class CustomAppBar extends StatelessWidget {
               MaterialPageRoute(builder: (context) => const TopDrawer()),
             );
           },
-          icon: const Icon(Icons.menu, size: 26),
+          icon: Icon(icon, size: 26),
         ),
       ],
       backgroundColor: const Color(0xff6b0b02),

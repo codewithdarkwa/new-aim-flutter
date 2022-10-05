@@ -13,7 +13,7 @@ class RegisterCourse extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(70),
-        child: CustomAppBar(appBarTitle: "Register Courses"),
+        child: CustomAppBar(appBarTitle: "Register Courses", icon: Icons.menu),
       ),
       body: ListView(
         children: [

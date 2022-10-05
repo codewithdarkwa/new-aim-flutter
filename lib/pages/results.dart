@@ -13,7 +13,7 @@ class Results extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(70),
-        child: CustomAppBar(appBarTitle: "Results"),
+        child: CustomAppBar(appBarTitle: "Results", icon: Icons.menu),
       ),
       body: ListView(
         children: [
