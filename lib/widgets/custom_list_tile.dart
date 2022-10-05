@@ -13,15 +13,24 @@ class CustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-        leading: Icon(icon, color: Colors.black),
-        title: Text(title),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => page),
-          );
-        },
-        minLeadingWidth: 5);
+    return Padding(
+      padding: const EdgeInsets.only(left: 30),
+      child: ListTile(
+          leading: Icon(icon, color: Colors.white, size: 30),
+          title: Text(
+            title,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+            ),
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => page),
+            );
+          },
+          minLeadingWidth: 5),
+    );
   }
 }
