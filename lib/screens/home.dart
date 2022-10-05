@@ -22,13 +22,13 @@ class _HomeState extends State<Home> {
         preferredSize: Size.fromHeight(70),
         child: CustomAppBar(appBarTitle: "Home", icon: Icons.menu),
       ),
-      body: ListView(
+      body: Column(
         children: [
           Column(
             children: [
               Container(
                 width: double.infinity,
-                height: screenHeight - 95,
+                height: screenHeight - 110,
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
@@ -63,6 +63,7 @@ class _HomeState extends State<Home> {
                             ],
                           ),
                           Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 10),
                             width: 60,
                             height: 60,
                             decoration: BoxDecoration(
