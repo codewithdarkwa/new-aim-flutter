@@ -31,7 +31,7 @@ class Profile extends StatelessWidget {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
-                  child: Column(
+                  child: ListView(
                     children: [
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,7 +90,6 @@ class Profile extends StatelessWidget {
                                   'Jdarkwah1',
                                   style: TextStyle(
                                     fontSize: 22,
-                                    color: Color(0xff6b0b02),
                                   ),
                                 )
                               ],
@@ -99,8 +98,132 @@ class Profile extends StatelessWidget {
                         ),
                       ),
                       const Divider(),
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Column(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'Surname',
+                                  style: TextStyle(
+                                    color: Color(0xff6b0b02),
+                                  ),
+                                ),
+                                Text(
+                                  'DARKWAH',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(),
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Column(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'Other Names',
+                                  style: TextStyle(
+                                    color: Color(0xff6b0b02),
+                                  ),
+                                ),
+                                Text(
+                                  'John',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(),
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Column(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'Gender',
+                                  style: TextStyle(
+                                    color: Color(0xff6b0b02),
+                                  ),
+                                ),
+                                Text(
+                                  'Male',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Divider(),
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        child: Column(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'Date of Birth',
+                                  style: TextStyle(
+                                    color: Color(0xff6b0b02),
+                                  ),
+                                ),
+                                Text(
+                                  '23 Oct 2002',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
+                ),
+              ),
+              const Divider(),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Column(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Passport Number',
+                          style: TextStyle(
+                            color: Color(0xff6b0b02),
+                          ),
+                        ),
+                        Text(
+                          'N/A',
+                          style: TextStyle(
+                            fontSize: 22,
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ],
