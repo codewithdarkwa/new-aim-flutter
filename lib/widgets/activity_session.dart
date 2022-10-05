@@ -62,6 +62,7 @@ class ActivitySession extends StatelessWidget {
                           activityName[index],
                           style: const TextStyle(
                             fontSize: 19,
+                            fontWeight: FontWeight.bold,
                             color: Color(0xff610b0d),
                           ),
                         ),

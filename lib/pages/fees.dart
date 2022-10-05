@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/custom_appbar.dart';
+
 class Fees extends StatelessWidget {
   const Fees({
     Key? key,
@@ -9,9 +11,9 @@ class Fees extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(70),
-        child: CustomAppBar(),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(70),
+        child: CustomAppBar(appBarTitle: "Results"),
       ),
       body: ListView(
         children: [
@@ -35,13 +37,4 @@ class Fees extends StatelessWidget {
       backgroundColor: const Color(0xff6b0b02),
     );
   }
-}
-
-Widget CustomAppBar() {
-  return AppBar(
-    title: const Text('Fees'),
-    actions: const [Icon(Icons.menu)],
-    backgroundColor: const Color(0xff6b0b02),
-    elevation: 0,
-  );
 }

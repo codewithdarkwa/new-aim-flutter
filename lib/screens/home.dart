@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../widgets/activity_session.dart';
 import '../widgets/class_schedule.dart';
+import '../widgets/custom_appbar.dart';
 import '../widgets/news_feed.dart';
 
 class Home extends StatefulWidget {
@@ -17,9 +18,9 @@ class _HomeState extends State<Home> {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(70),
-        child: CustomAppBar(),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(70),
+        child: CustomAppBar(appBarTitle: "Home"),
       ),
       body: ListView(
         children: [
@@ -114,13 +115,4 @@ class _HomeState extends State<Home> {
       backgroundColor: const Color(0xff6b0b02),
     );
   }
-}
-
-Widget CustomAppBar() {
-  return AppBar(
-    title: const Text('Home'),
-    actions: const [Icon(Icons.menu)],
-    backgroundColor: const Color(0xff6b0b02),
-    elevation: 0,
-  );
 }
