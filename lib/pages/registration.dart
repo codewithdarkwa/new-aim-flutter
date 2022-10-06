@@ -25,6 +25,25 @@ class Registration extends StatelessWidget {
         preferredSize: Size.fromHeight(70),
         child: CustomAppBar(appBarTitle: "Registration", icon: Icons.menu),
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        label: Row(
+          children: const [
+            Icon(Icons.edit),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              child: Text(
+                'Edit',
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
+          ],
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        backgroundColor: const Color(0xff6b0b02),
+      ),
       body: ListView(
         children: [
           Column(
@@ -55,9 +74,10 @@ class Registration extends StatelessWidget {
                             child: Text(
                               'Online registration for Semester 2, 2021/2022 Academic Year is available between 14 June 2022, 00:00 and 12 September 2022, 23:59 GMT',
                               style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: Color(0xff6b0b02)),
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xff6b0b02),
+                              ),
                             ),
                           ),
                         ),
