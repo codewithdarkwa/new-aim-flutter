@@ -18,6 +18,7 @@ class CustomAppBar extends StatelessWidget {
           fontSize: 24,
         ),
       ),
+      automaticallyImplyLeading: false,
       actions: [
         IconButton(
           onPressed: () {
