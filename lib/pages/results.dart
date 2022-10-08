@@ -14,7 +14,7 @@ class Results extends StatelessWidget {
     List results = [
       'Year 2,Second Semester',
       'Year 2,First Semester',
-      'Year 2,First Semester',
+      'Year 1,Second Semester',
       'Year 1,First Semester',
     ];
     return Scaffold(
