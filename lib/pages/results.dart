@@ -17,6 +17,7 @@ class Results extends StatelessWidget {
       'Year 1,Second Semester',
       'Year 1,First Semester',
     ];
+
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(70),
