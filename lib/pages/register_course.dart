@@ -30,7 +30,6 @@ class RegisterCourse extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              const Text('Hi there')
             ],
           ),
         ],
