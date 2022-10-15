@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../widgets/custom_appbar.dart';
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
   const Profile({
     Key? key,
   }) : super(key: key);
 
+  @override
+  State<Profile> createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
@@ -14,6 +19,25 @@ class Profile extends StatelessWidget {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(70),
         child: CustomAppBar(appBarTitle: "Profile", icon: Icons.menu),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        label: Row(
+          children: const [
+            Icon(Icons.edit),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              child: Text(
+                'Edit',
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
+          ],
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        backgroundColor: const Color(0xff6b0b02),
       ),
       body: ListView(
         children: [
@@ -272,11 +296,14 @@ class Bio extends StatelessWidget {
                 decoration: BoxDecoration(
                     // color: const Color(0xff6b0b02),
                     borderRadius: BorderRadius.circular(8)),
-                child: const Text(
-                  'Programme',
-                  style: TextStyle(
-                    fontSize: 17,
-                    color: Color(0xff6b0b02),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: const Text(
+                    'Programme',
+                    style: TextStyle(
+                      fontSize: 17,
+                      color: Color(0xff6b0b02),
+                    ),
                   ),
                 ),
               ),
