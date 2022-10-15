@@ -65,12 +65,16 @@ class Download extends StatelessWidget {
                         height: 130,
                         decoration: BoxDecoration(
                           color: const Color(0xfff3e9e9),
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(30),
                         ),
                         child: const Center(
                           child: Text(
                             'You have no downloads.',
-                            style: TextStyle(fontSize: 22),
+                            style: TextStyle(
+                              fontSize: 22,
+                              color: Color(0xff6b0b02),
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
                       ),
