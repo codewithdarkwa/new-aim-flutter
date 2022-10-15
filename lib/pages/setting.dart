@@ -29,6 +29,50 @@ class Setting extends StatelessWidget {
                   ),
                   color: Colors.white,
                 ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 25.0,
+                    horizontal: 25,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'About',
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xff6b0b02),
+                        ),
+                      ),
+                      const Divider(
+                        thickness: 2,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Version',
+                            style: TextStyle(
+                              fontSize: 19,
+                            ),
+                          ),
+                          Text(
+                            '2.0.6',
+                            style: TextStyle(fontSize: 17, color: Colors.grey),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            'Description',
+                            style: TextStyle(fontSize: 19),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
