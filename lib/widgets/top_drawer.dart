@@ -46,9 +46,9 @@ class TopDrawer extends StatelessWidget {
         ),
         backgroundColor: Colors.white,
         body: Container(
-          height: screenHeight - 170,
+          height: screenHeight - 150,
           color: const Color(0xff6b0b02),
-          child: Column(
+          child: ListView(
             children: [
               const CustomListTile(
                 title: "Home",
